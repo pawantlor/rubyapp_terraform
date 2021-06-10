@@ -6,11 +6,11 @@ Prerequisite:
       2. Change the default value inside variable.tf file for config-path variable according to cluster admin file path location
       3. Docker/Terraform installed.
       4. Docker Local hub URL needed by shell file.
-      5. Changed the application file (http_server.rb) with port from 80 to 8080. Generally nonroot user ports are not available upto 1023.
+      5. Changed the application file (http_server.rb) with port from 80 to 8080. Generally port from 1 to 1023 are restircted for root user.
       
 Steps to Execute:
 
-      1. Copy only ci-cd.sh file to server where kubernetes conf is setup (Try to run script with sudo user).
+      1. Copy only ci-cd.sh file to server where kubernetes admin conf is setup (Try to run script with sudo user, Docker build/push to work).
       2. Execute ci-cd.sh file with parameter of your local docker repo.
              e.g. sh ci-cd.sh local-hub
              
