@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#******************MiniKube installation Steps Commented*******************
+#curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+#sudo install minikube-linux-amd64 /usr/local/bin/minikube
+#minikube start
+
+#*******************Actual Program Starts**********************
 if [ $# -eq 0 ]; then
         echo "Local docker repo is not Provided, Please provide local docker repo! Exiting"
         exit 1
@@ -27,8 +33,8 @@ else
 fi
 
 echo "*****Running Docker Build*****"
-docker build -t $localrepo/rubyapp:1.0 .
-docker push $localrepo/rubyapp:1.0
+sudo docker build -t $localrepo/rubyapp:1.0 .
+sudo docker push $localrepo/rubyapp:1.0
 echo "*****Done with Docker Push*****"
 
 
@@ -41,7 +47,7 @@ fi
 
 echo "*********** Terraform Init*********"
 terraform init
-echo "*********** Terraform Init*********"
+echo "*********** Terraform Plan*********"
 terraform plan -var "image-name=$localrepo/rubyapp:1.0" -out=tfplan
 
 echo "*********** Terraform Apply*********"
