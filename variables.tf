@@ -24,3 +24,8 @@ variable "label-name" {
   default = "MytestApp"
   type    = string
 }
+
+variable "config-path" {
+  default = "~/.kube/config"
+  type    = string
+}
