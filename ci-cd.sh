@@ -29,7 +29,7 @@ fi
 echo "*****Running Docker Build*****"
 docker build -t $localrepo/rubyapp:1.0 .
 docker push $localrepo/rubyapp:1.0
-echo "*****Running Docker Build*****"
+echo "*****Done with Docker Push*****"
 
 
 if [ ! -f main.tf ]; then
