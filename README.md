@@ -4,7 +4,7 @@ Prerequisite:
 
       1. Need Minikube/Kubecluster installed (I have added commands for minikube installation in shell, but commented as sometime, it needs to be setup properly).
       2. Change the default value inside variable.tf file for config-path variable according to cluster admin file path location
-      3. Docker/Terraform installed.
+      3. Docker/Terraform installed. (kubernetes provider v2.3.1/Terraform v0.12.31 was used to do this assignment) 
       4. Docker Local hub URL needed by shell file.
       5. Changed the application file (http_server.rb) with port from 80 to 8080. Generally port from 1 to 1023 are restircted for root user.
       
